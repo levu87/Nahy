@@ -1,0 +1,30 @@
+.tin-tuc-navigation 
+    padding: 1.5rem 
+    background: #f3f3f3
+    ul 
+        list-style: none 
+        text-align: center 
+        li 
+            display: inline-block 
+            margin-right: 30px
+            a 
+                color: #333333 
+                font-size: 1.4rem
+                text-transform: uppercase
+                position: relative
+                &:after 
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    height: 1px
+                    background-color: #333
+                    transform-origin: bottom right
+                    transform: scaleX(0)
+                    transition: transform 0.5s ease
+            &.active,&:hover 
+                a 
+                    &:after 
+                        transform-origin: bottom left
+                        transform: scaleX(1)

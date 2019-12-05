@@ -1,0 +1,284 @@
+.chitiet-tuyendung
+    padding: 5rem 0
+    .contain 
+        time 
+            font-size: 1.6rem 
+            color: #666666 
+            margin-top: 2rem 
+            display: block
+        .table 
+            margin-top: 2rem
+            tr 
+                td 
+                    padding-bottom: 2rem 
+                    color: #666666
+                    font-family: "Livvic"
+                    line-height: 1.375
+                .title 
+                    width: 30%
+                    position: relative
+                    &:after
+                        content: ':'
+                        display: block
+                        position: absolute
+                        top: 0rem
+                        right: 1rem
+                td:first-child
+                    color: #333333!important
+        h3 
+            font-family: "Playfair Display"
+            color: rgb(51, 51, 51)
+            line-height: 1.2
+            font-size: 3rem
+        p 
+            font-size: 1.6rem
+            font-family: "Livvic"
+            color: rgb(102, 102, 102)
+            line-height: 1.375
+            strong 
+                color: #333333
+                font-size: 2rem
+                padding-top: 2rem
+                padding-bottom: 2rem
+                display: block
+                text-transform: uppercase
+                font-family: "Playfair Display"
+        ul 
+            margin-left: 2rem
+            color: #666666
+            li
+                color: #666666
+                margin-bottom: 1.5rem
+                p 
+                    
+                    font-size: 1.6rem
+                    font-family: "Livvic"
+                    color: rgb(102, 102, 102)
+                    line-height: 1.375
+
+        .cata 
+            font-size: 1.6rem
+            font-family: "Livvic"
+            color: rgb(102, 102, 102)
+            font-weight: bold
+            line-height: 1.375
+            margin-bottom: 2rem
+
+                    
+        .button 
+            display: flex
+            align-items: center
+            margin-top: 3rem
+            flex-wrap: wrap
+            p 
+                padding: 0 2rem
+            .button-ungtuyen
+                width: 20rem
+                display: flex
+                height: 4rem
+                justify-content: center
+                align-items: center
+                font-size: 1.4rem
+                color: #333333
+                font-family: "Livvic"
+                padding-right: 1rem
+                background: #333333
+                color: #ffffff
+            .button-down
+                width: 28rem
+                height: 4rem
+                display: flex
+                justify-content: center
+                align-items: center
+                color: #333333
+                font-family: "Livvic"
+                padding-right: 1rem
+                font-size: 1.4rem
+                background: #333333
+                color: #ffffff
+                em
+                    margin-right: .5rem
+                    font-size: 1.4rem
+                .lnr:before 
+                    font-weight: 600!important
+            @media (max-width: 576px)
+                flex-direction: column
+                .button-ungtuyen,.button-down
+                    margin: 1rem
+                   
+    @media (max-width: 1025px)
+        .contain
+            margin-bottom: 3rem
+    .other 
+        .head 
+            width: 100% 
+            background: #333333
+            h2 
+                padding: 1rem 2rem
+                text-transform: uppercase
+                font-size: 2rem
+                text-align: center
+                white-space: nowrap
+                color: #ffffff
+                font-weight: 400
+                
+
+        .list-item 
+            list-style: none
+            background: #f3f3f3
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,.1)
+            li 
+                padding: 2rem
+                border-bottom: 1px solid #e1e1e1
+                time 
+                    color: #666666
+                    font-size: 1.2rem
+                    padding-bottom: 2rem
+                    display: block
+                    font-family: "Livvic"
+                a 
+                    font-size: 1.4rem
+                    h4 
+                        font-size: 1.4rem
+                        font-family: "Livvic"
+                        color: rgb(51, 51, 51)
+                        line-height: 1.429
+
+
+                        
+                &:hover 
+                    box-shadow: 0 5px 10px 0px rgba(0,0,0,.1)
+                    a 
+                        color: #0b9444
+                        transition: .3s
+.news-detail-page.vi-vn
+    .pagination
+        display: none
+.form-apply
+    position: fixed
+    top: 7%
+    left: 50%
+    transform: translateX(-50%)
+    width: 50%
+    height: 700px!important
+    display: none
+    padding: 50px
+    z-index: 999
+    background: #ffffff
+    @media (max-width: 768px)
+        width: 80%
+    @media (max-width: 480px)
+        width: 100%
+        padding: 20px
+    &.active
+        display: block!important
+    @media (min-width: 623px)
+        height: 420px
+    iframe
+        border: 0
+        background: #ffffff
+        width: 100%
+        height: 100%
+    .button-out
+        position: absolute
+        top: 0
+        right: 0
+        width: 50px
+        height: 50px
+        background: #0b9444
+        display: flex
+        justify-content: center
+        align-items: center
+        em 
+            font-size: 3rem 
+            color: #ffffff
+
+.apply-frm
+    padding-top: 10rem 
+    background: #ffffff!important
+    
+    input[type='text'], textarea
+        width: 100%!important
+    .col-left 
+        .form-group
+            max-width: 100%!important
+            flex: 0 0 100%!important
+        .form-group:nth-child(3)
+            display: none
+    h4 
+        font-size: 0 
+        position: relative
+        &:before 
+            position: absolute 
+            content: ''
+            display: block 
+            top: -4rem
+            width: 5rem
+            height: .2rem
+            background: #999999
+            left: 0
+        &:after 
+            position: absolute 
+            content: "Form ứng tuyển"
+            color: #666666
+            display: block
+            font-size: 3.6rem
+            top: -10rem
+            white-space: nowrap
+    input[type='button']
+        display: inline-block
+        padding: 1rem 10rem 1rem 6rem
+        border-radius: 25px
+        font-size: 0!important
+    .ruButton.ruBrowse
+        width: 170px!important
+        height: 42px!important
+    .ruFileWrap.ruStyled
+        display: inline-block
+        position: relative
+        &:after 
+            display: block
+            position: absolute
+            top: 1.2rem
+            color: #666666
+            font-weight: 600
+            left: 3rem
+            font-size: 1.8rem
+            white-space: nowrap
+            content: "Chọn file"
+        &:before
+            content: '\f337'
+            font: normal normal normal 24px/1 Material Design Icons
+            position: absolute
+            top: 40%
+            right: 4rem
+            color: #666666
+            font-size: 1.8rem
+            transform: translateY(-50%)
+    .frm-btn
+        position: relative
+        display: inline-block
+        .col-left 
+        &:after
+            content: '\e87a'
+            font-family: Linearicons-Free
+            position: absolute
+            top: 50%
+            right: 4rem
+            color: #fff
+            font-size: 1.8rem
+            transform: translateY(-50%)
+        input[type=submit]
+            background: #0b9444
+            width: unset 
+            height: unset 
+            display: inline-block
+            padding: 1rem 10rem 1rem 6rem
+            border-radius: 25px
+            transition: 0.5s ease-in-out
+        &:hover,&.active 
+            input[type=submit]
+                background: #ac2021
+.container-fluid
+    background: #ffffff!important
+
