@@ -1,0 +1,73 @@
+.col-xl-3.side-menu-wrapper
+	.product-nav-list
+		nav.side-menu-option
+			h4 Danh mục sản phẩm
+			ul.menu-list
+				li.has-submenu
+					a(href="#") Trẻ em
+					ul.submenu
+						li
+							a(href="#") Sub 1
+						li
+							a(href="#") Sub 2
+						li
+							a(href="#") Sub 3
+				li.has-submenu
+					a(href="#") Công sở
+					ul.submenu
+						li
+							a(href="#") Sub 1
+						li
+							a(href="#") Sub 2
+						li
+							a(href="#") Sub 3
+				li.has-submenu
+					a(href="#") Du lịch
+					ul.submenu
+						li
+							a(href="#") Sub 1
+						li
+							a(href="#") Sub 2
+						li
+							a(href="#") Sub 3
+				li.has-submenu
+					a(href="#") Sản phẩm thời trang
+					ul.submenu
+						li
+							a(href="#") Sub 1
+						li
+							a(href="#") Sub 2
+						li
+							a(href="#") Sub 3
+	.product-filter-list
+		.side-menu-option
+			h4 Mức giá
+			.form-group
+				label(for="amount")
+				input#amount(type="text")
+			#slider-range
+		.side-menu-option
+			h4 Màu sắc
+			ul.filter-list
+				- for(i=0;i<20;i++)
+					li
+						span(style="background-color: red")
+						a(href="#") Màu sắc
+		.side-menu-option
+			h4 Theo độ tuổi
+			ul.filter-list
+				- for(i=0;i<5;i++)
+					li
+						a(href="#") Tiểu học
+		.side-menu-option.imgopt
+			h4 Theo hình ảnh
+			ul.filter-list
+				- for(i=0;i<25;i++)
+					li
+						a(href="#") Tiểu học
+		.side-menu-option
+			h4 Size
+			ul.filter-list
+				- for(i=0;i<5;i++)
+					li
+						a(href="#") 18

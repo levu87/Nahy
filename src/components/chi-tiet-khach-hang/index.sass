@@ -1,0 +1,152 @@
+.ctkh-navigation 
+    padding: 1.5rem 
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+    position: relative 
+    z-index: 9
+    @media (max-width: 1025px)
+        box-shadow: unset
+    ul 
+        list-style: none 
+        text-align: center 
+        li 
+            display: inline-block 
+            margin-right: 30px
+            a 
+                color: #333333 
+                font-size: 1.4rem
+                text-transform: uppercase
+                position: relative
+                &:after 
+                    content: ''
+                    position: absolute
+                    bottom: -1.3rem
+                    left: 0
+                    right: 0
+                    height: 2px
+                    background-color: #333
+                    transform-origin: bottom right
+                    transform: scaleX(0)
+                    transition: transform 0.5s ease
+            &.active,&:hover 
+                a 
+                    font-weight: 600
+                    &:after 
+                        transform-origin: bottom left
+                        transform: scaleX(1)
+    @media (max-width: 1025px)
+        ul 
+            display: none 
+        .custom-select
+            display: block!important
+    @media (max-width: 768px)
+        .select
+            padding: 0
+    .custom-select 
+        position: relative 
+        display: none
+        select 
+            display: none 
+    .select-selected 
+        background-color: none
+        border: 1px solid #333333
+        white-space: nowrap
+        &:after 
+            content: '\f140'
+            font: normal normal normal 24px/1 Material Design Icons
+            position: absolute
+            top: 50%
+            right: 10px
+            font-size: 18px
+            transform: translateY(-50%)
+            color: #333333
+            border-color: #fff transparent transparent transparent 
+        &.select-arrow-active 
+            &:after 
+                border-color: transparent transparent #fff transparent           
+    .select-items a,.select-selected 
+        color: #333333
+        padding: 8px 16px 
+        border: 1px solid transparent 
+        border-color: #666666 #666666 #666666 #666666
+        cursor: pointer 
+        user-select: none 
+        &.select-arrow-active 
+            border-color: #666666 #666666 transparent #666666
+    .select-items 
+        position: absolute 
+        background-color: rgba(#000,.8)
+
+        top: 100% 
+        left: 0 
+        right: 0 
+        z-index: 99 
+    .select-items>a
+        display: block
+        border-color: #333333
+        color: #ffffff
+        border-top: none!important
+        border-bottom: none
+        background-color: rgba(#000,.8)
+    .select-items>a:last-child 
+        border-bottom: 1px solid #333333
+        background-color: rgba(#000,.8)
+    .select-hide 
+        display: none 
+    .select-items a:hover, .same-as-selected 
+        background: none 
+        color: #ffffff
+.chi-tiet-khach-hang 
+    h1 
+        font-size: 3rem 
+        font-weight: 400
+        margin-bottom: 2rem 
+    .full-content 
+        p
+            font-size: 1.6rem
+            font-family: "Livvic"
+            color: rgb(51, 51, 51)
+            line-height: 1.2
+        p:not(:last-child)
+            margin-bottom: 2rem
+    .slider 
+        padding: 5rem 0
+        position: relative
+        .swiper-slide 
+            height: 28rem 
+            width: auto 
+            img 
+                width: 100%
+                height: 100%
+                object-fit: cover
+                
+        .swiper-navigation
+            width: 110%
+            display: flex
+            align-items: center
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            z-index: 99
+            .ctkh-button-next,.ctkh-button-prev
+                width: 35px
+                height: 35px
+                display: flex
+                border: 1px solid #666666
+                outline: none
+                display: flex
+                justify-content: center
+                align-items: center
+                em 
+                    color: #666666
+                    font-size: 20px
+                    font-weight: bold 
+                &:hover 
+                    em
+                        color: #333333
+                        transition: all .4s ease-in-out
+            .ctkh-button-next 
+                margin-left: auto
+            @media (max-width: 992px)
+                top: 95%
+                width: 80px

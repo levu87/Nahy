@@ -1,0 +1,14 @@
+extends _layout.pug
+
+block var
+	- var title = 'khách hàng'
+	- var bodyClass = 'khach-hang-page'
+
+block main
+	include ../components/_global/banner.pug
+	include ../components/chi-tiet-khach-hang/nav.pug
+	include ../components/_global/breadcrumb.pug
+	include ../components/chi-tiet-khach-hang/index.pug
+	include ../components/_global/footer-top.pug
+	
+	
