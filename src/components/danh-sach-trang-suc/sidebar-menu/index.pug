@@ -1,7 +1,8 @@
-.col-xl-3.side-menu-wrapper
+.col-lg-3.side-menu-wrapper
 	.product-nav-list
-		nav.side-menu-option
-			h4 Danh mục sản phẩm
+		nav.cate
+			.head
+				h4.f-2.f-2 trang sức
 			ul.menu-list
 				li.has-submenu
 					a(href="#") Trẻ em
@@ -41,33 +42,15 @@
 							a(href="#") Sub 3
 	.product-filter-list
 		.side-menu-option
-			h4 Mức giá
-			.form-group
-				label(for="amount")
-				input#amount(type="text")
-			#slider-range
+			h4.f-2 chất liệu chính
+			ul.filter-list
+				- for(i=0;i<5;i++)
+					li.checkbox
+						a(href="javascript:void(0)") Bạc
 		.side-menu-option
-			h4 Màu sắc
+			h4.f-2 Màu sắc
 			ul.filter-list
 				- for(i=0;i<20;i++)
-					li
+					li.color
 						span(style="background-color: red")
 						a(href="#") Màu sắc
-		.side-menu-option
-			h4 Theo độ tuổi
-			ul.filter-list
-				- for(i=0;i<5;i++)
-					li
-						a(href="#") Tiểu học
-		.side-menu-option.imgopt
-			h4 Theo hình ảnh
-			ul.filter-list
-				- for(i=0;i<25;i++)
-					li
-						a(href="#") Tiểu học
-		.side-menu-option
-			h4 Size
-			ul.filter-list
-				- for(i=0;i<5;i++)
-					li
-						a(href="#") 18
