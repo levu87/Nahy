@@ -305,7 +305,24 @@ function tabpro(){
 		$("#"+tab_id).addClass('active');
 	})
 }
+function maps(){
+	$('.list-map-item .item').on('click',function () {
+		var mapHtml = $(this).children('.map-iframe').html();
+		$('#showroom-map').html(mapHtml);
 
+		$('.list-map-item .item').removeClass('active');
+		$(this).addClass('active');
+		if ($(window).outerWidth() < 992) {
+			$.fancybox.open({
+				src: '#showroom-map',
+				type: "inline",
+				opts: {
+					baseClass: "contact-map-popup"
+				}
+			});
+		}
+	});
+}
 $(document).ready(function(){
 	Aos()
 	setBackground()
@@ -315,7 +332,7 @@ $(document).ready(function(){
 	CustomSelect()
 	productCate()
 	tabpro()
-
+	maps()
 	const listViewButton = document.querySelector('.list-view-button');
 	const gridViewButton = document.querySelector('.grid-view-button');
 	const list = document.querySelector('.list');
