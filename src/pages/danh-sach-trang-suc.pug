@@ -1,0 +1,17 @@
+extends _layout.pug
+
+block var
+	- var title = 'Trang sức'
+	- var bodyClass = 'Trang-suc-page'
+
+block main
+	include ../components/_global/banner.pug
+	include ../components/_global/breadcrumb.pug
+	article.jewelry-list
+		.container
+			.row
+				include ../components/danh-sach-trang-suc/sidebar-menu/index.pug
+				include ../components/danh-sach-trang-suc/list/index.pug
+	include ../components/_global/footer-top.pug
+	
+	

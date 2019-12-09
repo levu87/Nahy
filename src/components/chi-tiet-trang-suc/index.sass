@@ -1,0 +1,497 @@
+.product-detail 
+    padding: 5rem 0
+    .product-detail-wrapper
+        display: flex
+        flex-wrap: wrap
+    .slider
+        width: 60%
+        @media (max-width: 1024px)
+            width: 100%
+        .product-similar 
+            padding-top: 5rem 
+            border-top: 1px solid #dfdfdf
+            @media (max-width: 1024px)
+                margin-bottom: 5rem
+            .similar-slider
+                position: relative
+            h2
+                font-size: 3rem 
+                color: #333333 
+                text-align: center
+                font-weight: 400
+                text-transform: uppercase
+                margin-bottom: 3rem
+            .similar-button-prev,.similar-button-next
+                top: 50%
+                transform: translateY(-50%)
+                z-index: 9 
+                position: absolute 
+                outline: none
+                em 
+                    color: #999999
+
+            .similar-button-prev
+                left: 0 
+            .similar-button-next 
+                right: 0
+            .swiper-container 
+                max-width: 90%
+                .swiper-slide 
+                    .product-item
+                        figure 
+                            .img 
+                                height: 20rem
+                                width: auto 
+                                border: 1px solid #dfdfdf
+                                img 
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: contain
+                            figcaption 
+                                text-align: center
+                                .title
+                                    font-size: 1.4rem 
+                                    color: #666666
+                                    display: block 
+                                    padding: 2rem 0
+                                .price 
+                                    color: #333333
+                                    font-weight: 500
+                                    font-size: 1.6rem
+                    .product-item
+                        figure 
+                            .img 
+                                position: relative
+                                .overlay
+                                    position: absolute 
+                                    width: 100%
+                                    height: 100% 
+                                    top: 0 
+                                    left: 0 
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    flex-direction: column
+                                    &:before,&:after
+                                        position: absolute
+                                        top: 0
+                                        right: 0
+                                        bottom: 0
+                                        left: 0
+                                        transform: scale3d(0, 0, 1)
+                                        transition: transform .3s ease-out 0s
+                                        background: rgba(#000,.3)
+                                        content: ''
+                                        pointer-events: none
+                                        z-index: 7
+                                    &:before
+                                        transform-origin: left top
+                                    &:after
+                                        transform-origin: right bottom
+                                    .add-cart,.view-detail 
+                                        position: relative
+                                        z-index: 9
+                                        border: 1px solid #ffffff
+                                        width: 16rem 
+                                        height: 4rem
+                                        display: flex 
+                                        align-items: center 
+                                        justify-content: center
+                                        color: #ffffff
+                                        margin: .5rem 0
+                                        text-transform: capitalize
+                                        font-size: 1.4rem
+                                        opacity: 0
+                                        transition: transform .35s ease-out 0s
+                                        em 
+                                            margin-right: 1rem
+                            &:hover,&:focus
+                                .overlay
+                                    .add-cart,.view-detail 
+                                        opacity: 1
+                                    &:before,&:after
+                                        transform: scale3d(1, 1, 1)
+    @media (max-width: 1024px)
+        .gallery-detail 
+            .slider-thumbs
+                position: relative
+                display: flex
+                justify-content: center
+                margin: 3rem 0
+                .gallery-thumbs
+                    width: 90%
+                    .swiper-slide 
+                        .img
+                            height: 15rem!important
+                            border: 1px solid #dfdfdf
+                            width: auto
+                            img 
+                                width: 100%
+                                height: 100%
+                                object-fit: scale-down
+            .gallery-top
+                .swiper-slide 
+                    .img
+                        border: 1px solid #dfdfdf
+                        height: 62rem
+                        width: auto
+                        img 
+                            width: 100%
+                            height: 100%
+                            object-fit: fill
+            .product-button-up,.product-button-down
+                display: none
+            .product-button-prev,.product-button-next
+                display: block
+                position: absolute 
+                top: 50%
+                transform: translateY(-50%)
+                z-index: 99
+                outline: none
+                em 
+                    color: #c2c2c2
+                    font-size: 2.4rem
+            .product-button-prev
+                left: 0
+            .product-button-next
+                right: 0
+    @media (min-width: 1025px)
+        .gallery-detail
+            margin-bottom: 5rem
+            display: flex
+            overflow: hidden
+            height: 62rem
+            flex: 0 0 100%
+            max-width: 100%
+            align-items: center
+            position: relative
+            flex-direction: row-reverse
+            .slider-thumbs
+                width: calc(30% -20px)
+                position: relative
+                height: 62rem
+                display: flex
+                align-items: center
+            .gallery-thumbs
+                .swiper-slide 
+                    .img
+                        height: 15rem!important
+                        border: 1px solid #dfdfdf
+                        width: auto
+                        img 
+                            width: 100%
+                            height: 100%
+                            object-fit: scale-down
+                .swiper-slide-thumb-active
+                    .img
+                        border: 2px solid #dfdfdf
+                height: 55rem
+            .product-button-next,.product-button-prev
+                display: none
+            .product-button-up,.product-button-down
+                position: absolute 
+                left: 50%
+                transform: translateX(-50%)
+                z-index: 99
+                outline: none
+                em 
+                    color: #c2c2c2
+                    font-size: 2.4rem
+            .product-button-down
+                top: 0
+            .product-button-up
+                bottom: 0
+                        
+            .gallery-top
+                max-width: 66.66%
+                flex: 0 0 66.66%
+                .swiper-slide 
+                    .img
+                        border: 1px solid #dfdfdf
+                        height: 62rem
+                        width: auto
+                        img 
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+        .product-info  
+            padding-left: 4.5rem
+            width: 40%
+    .product-info
+        h1
+            font-size: 3rem 
+            color: #333333 
+            font-weight: 400
+            margin-bottom: 5rem
+        .subtitle 
+            font-size: 1.6rem
+            color: rgb(51, 51, 51)
+            line-height: 1.375
+        .product-attributes
+            padding: 3rem 0
+            table
+                width: 100%
+                color: #333333
+                font-size: 16px
+                tr
+                    border-bottom: 1px solid #e5e5e5
+                    &:first-child
+                        border-top: 1px solid #e5e5e5
+                    td
+                        height: 40px
+                    th
+                        font-weight: 600
+                        width: 50%
+        .add-cart 
+            background: #333333
+            color: #ffffff 
+            padding: 1rem 3rem
+            font-size: 1.6rem 
+            display: inline-block
+            margin-bottom: 3rem
+            em 
+                margin-right: 1rem 
+        .item-quantity
+            display: flex
+            align-items: center
+            margin-bottom: 3rem
+            span 
+                color: #333333
+                font-weight: 600
+            .input-group
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-left: 3.6rem
+
+                input 
+                    height: 4rem
+                    width: 4rem
+                    font-size: 1.6rem
+                    
+            .input-group-btn
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #333333
+                height: 4rem
+                width: 4rem
+                position: relative
+                &:hover
+                    
+                    transition: .25s all ease-in-out
+                .qty-minus
+                    height: 100%
+                    width: 100%
+                    line-height: 40px
+                    text-align: center
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    em
+                        color: #ffffff
+                        font-size: 15px
+
+                                
+                .qty-plus
+                    height: 100%
+                    width: 100%
+                    line-height: 40px
+                    text-align: center
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    em
+                        color: #ffffff
+                        font-size: 15px     
+            input
+                border: 0
+                text-align: center
+                background: #fff
+                width: 4rem
+                border: 1px solid #e5e5e5
+                height: 4rem
+                font-size: 1.6rem
+        .social-icon 
+            list-style: none
+            li 
+                display: inline-block
+                margin-right: 10px
+                .twt 
+                    background: #3c9cd8
+                    width: 40px
+                    height: 20px
+                    display: flex
+                    justify-content: center 
+                    align-items: center
+                    border-radius: 2px
+                    em 
+                        color: #ffffff
+                        font-size: 10px
+                .fb
+                    background: #395aa1
+                    width: 40px
+                    height: 20px
+                    display: flex
+                    justify-content: center 
+                    align-items: center
+                    border-radius: 2px
+                    em 
+                        color: #ffffff
+                        font-size: 10px
+                .fax
+                    background: #a3b4bb
+                    width: 40px
+                    height: 20px
+                    display: flex
+                    justify-content: center 
+                    align-items: center
+                    border-radius: 2px
+                    em 
+                        color: #ffffff
+                        font-size: 10px
+        .tab-wrapper 
+            padding-top: 5rem
+            .tab-navigation 
+                border-bottom: 2px solid #dfdfdf
+                padding: 1rem 0
+                width: 100%
+                display: flex
+                margin-bottom: 3rem
+                li 
+                    list-style: none
+                    width: 50%
+                    position: relative
+                    a 
+                        text-transform: uppercase
+                        font-size: 1.8rem
+                        color: #333333
+                        &:after 
+                            content: ''
+                            display: block 
+                            position: absolute
+                            background: #666666 
+                            height: 2px 
+                            width: 0
+                            left: 0
+                            bottom: -12px
+                            transition: .2s
+                        &:hover,&.active 
+                            &:after
+                                width: 100%
+            .tab-content 
+                display: none 
+                &.active 
+                    display: block
+                li 
+                    margin-left: 2rem 
+                    color: #666666
+                    font-size: 1.6rem
+                    p 
+                        
+                        font-size: 1.6rem
+                        font-family: "Livvic"
+                        color: rgb(102, 102, 102)
+                        line-height: 1.375
+    .product-other 
+        padding-top: 5rem
+        position: relative
+        h2
+            font-size: 3rem 
+            color: #333333 
+            text-align: center
+            font-weight: 400
+            text-transform: uppercase
+            margin-bottom: 3rem
+        .other-button-prev,.other-button-next
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 9 
+            position: absolute 
+            outline: none
+            em 
+                color: #999999
+
+        .other-button-prev
+            left: 0 
+        .other-button-next 
+            right: 0
+        .swiper-container 
+            max-width: 90%
+            .swiper-slide 
+                .product-item
+                    figure 
+                        .img 
+                            height: 46rem
+                            width: auto 
+                            border: 1px solid #dfdfdf
+                            img 
+                                width: 100%
+                                height: 100%
+                                object-fit: contain
+                        figcaption 
+                            text-align: center
+                            .title
+                                font-size: 1.4rem 
+                                color: #666666
+                                display: block 
+                                padding: 2rem 0
+                            .price 
+                                color: #333333
+                                font-weight: 500
+                                font-size: 1.6rem
+                .product-item
+                    figure 
+                        .img 
+                            position: relative
+                            .overlay
+                                position: absolute 
+                                width: 100%
+                                height: 100% 
+                                top: 0 
+                                left: 0 
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                flex-direction: column
+                                &:before,&:after
+                                    position: absolute
+                                    top: 0
+                                    right: 0
+                                    bottom: 0
+                                    left: 0
+                                    transform: scale3d(0, 0, 1)
+                                    transition: transform .3s ease-out 0s
+                                    background: rgba(#000,.3)
+                                    content: ''
+                                    pointer-events: none
+                                    z-index: 7
+                                &:before
+                                    transform-origin: left top
+                                &:after
+                                    transform-origin: right bottom
+                                .add-cart,.view-detail 
+                                    position: relative
+                                    z-index: 9
+                                    border: 1px solid #ffffff
+                                    width: 16rem 
+                                    height: 4rem
+                                    display: flex 
+                                    align-items: center 
+                                    justify-content: center
+                                    color: #ffffff
+                                    margin: .5rem 0
+                                    text-transform: capitalize
+                                    font-size: 1.4rem
+                                    opacity: 0
+                                    transition: transform .35s ease-out 0s
+                                    em 
+                                        margin-right: 1rem
+                        &:hover,&:focus
+                            .overlay
+                                .add-cart,.view-detail 
+                                    opacity: 1
+                                &:before,&:after
+                                    transform: scale3d(1, 1, 1)
+
+

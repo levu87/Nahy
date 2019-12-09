@@ -1,0 +1,14 @@
+extends _layout.pug
+
+block var
+	- var title = 'Tin tức'
+	- var bodyClass = 'tin-tuc-page'
+
+block main
+	include ../components/_global/banner.pug
+	include ../components/tin-tuc/nav.pug
+	include ../components/_global/breadcrumb.pug
+	include ../components/tin-tuc/index.pug
+	include ../components/_global/footer-top.pug
+	
+	
