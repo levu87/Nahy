@@ -1,0 +1,28 @@
+.linh-vuc-hoat-dong-ct
+    @media(min-width: 1025px)
+        padding-bottom: 50px
+    .list-wrapper
+        .item
+            margin-bottom: 30px
+            figure
+                .image
+                    overflow: hidden
+                    img
+                        width: 100%
+                        transition: .4s ease-in-out all
+                figcaption
+                    padding-top: 15px
+                    text-align: center
+                    p
+                        a
+                            color: #666666
+                        @media(min-width: 1025px)
+                            font-size: 18px
+                &:hover
+                    .image
+                        img
+                            transform: scale(1.2) rotate(-5deg)
+                    figcaption
+                        p
+                            a
+                                color: #f9c750

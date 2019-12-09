@@ -1,0 +1,32 @@
+.linh-vuc-hoat-dong
+    .wrapper
+        @media(min-width: 1025px)
+            display: flex
+            &>div
+                flex: 0 0 50%
+            &:nth-child(odd)
+                .image-wrapper
+                    order: 2
+        .content-wrapper
+            padding: 20px 0
+            @media(min-width: 1025px)
+                padding: 40px
+            h4
+                font-size: 20px
+                margin-bottom: 20px
+                @media(min-width: 1025px)
+                    font-size: 30px 
+            p
+                color: #666
+                + p
+                    margin-top: 10px
+            a
+                display: inline-block
+                margin-top: 20px
+                border: 1px solid #333
+                padding: 8px 35px
+                color: #333
+                transition: .4s ease-in-out all
+                &:hover
+                    background: #333333
+                    color: #fff

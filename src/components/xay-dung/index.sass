@@ -1,0 +1,67 @@
+.xay-dung
+    padding-bottom: 20px
+    @media(min-width: 1025px)
+        padding-bottom: 50px
+    .item
+        margin-bottom: 30px
+        figure
+            .image
+                overflow: hidden
+                img
+                    transition: .4s ease-in-out all
+                    width: 100%
+            figcaption
+                padding-top: 10px
+                color: #333
+                h5
+                    font-size: 18px
+                    margin-bottom: 10px
+                    font-weight: 500
+                    // text-transform: uppercase
+                p
+                    display: -webkit-box
+                    -webkit-line-clamp: 3
+                    -webkit-box-orient: vertical  
+                    overflow: hidden
+                    // font-weight: 500
+                span
+                    font-size: 14px
+                    color: #666666
+                    display: inline-block
+                    margin-top: 20px
+                    text-transform: uppercase
+            &:hover
+                .image
+                    img
+                        transform: scale(1.2)
+                figcaption
+                    span
+                        text-decoration: underline
+        &:not(.top-item)
+            @media(min-width: 768px)
+                figure
+                    display: flex
+                    .image, figcaption
+                        flex: 0 0 50%
+                    figcaption
+                        padding: 20px
+    .top-item
+        figure
+            figcaption
+                padding-top: 20px
+                h5
+                    font-size: 20px
+                    text-transform: uppercase
+    .bottom-wrapper
+        .item
+            figure
+                figcaption
+                    @media(min-width: 1025px)
+                        background: #f9f9f9
+                    h5
+                        font-size: 20px
+                        text-transform: uppercase
+                    p
+                        color: #666
+                    @media(min-width: 1025px)
+                        padding: 50px

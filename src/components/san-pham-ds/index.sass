@@ -1,0 +1,36 @@
+.san-pham-ds
+    .categories-wrapper
+        border: 1px solid #c1c1c1
+        .heading
+            padding: 6px 15px
+            background: #000000
+            color: #fff
+            h3
+                font-weight: 500
+                text-transform: uppercase
+        .list-item
+            padding: 0 15px
+            .item
+                + .item
+                    border-top: 1px solid #c1c1c1
+                padding: 10px 0
+                .item-heading
+                    cursor: pointer
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    &::after
+                        font-size: 14px
+                        content: '\e874'
+                        font-family: Linearicons-Free
+
+                a
+                    color: #333
+                ul
+                    display: none
+                    padding-top: 10px
+                    padding-left: 20px
+                    list-style-type: none
+                    li
+                        a
+                            font-size: 14px

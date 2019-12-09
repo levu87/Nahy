@@ -1,0 +1,44 @@
+.home-3
+    padding-bottom: 0
+    padding-top: 30px
+    @media(min-width: 1025px)
+        padding-bottom: 20px
+    .right-wrapper
+        height: 100%
+    .image
+        margin-bottom: 30px
+        overflow: hidden
+        img
+            width: 100%
+            transition: .4s ease-in-out all
+        &:hover
+            img
+                transform: scale(1.2) rotate(-5deg)
+    @media(min-width: 1025px)
+        .big-image
+            img
+                height: 360px
+        .small-image
+            img
+                height: 180px
+        .right-wrapper
+            .row:nth-child(2)
+                height: calc(100% - 210px)
+        .last-image
+            height: calc(100% - 30px)
+            img
+                height: 100%
+    @media(min-width: 1200px)
+        .big-image
+            img
+                height: 450px
+        .small-image
+            img
+                height: 225px
+        .right-wrapper
+            .row:nth-child(2)
+                height: calc(100% - 255px)
+        .last-image
+            height: calc(100% - 30px)
+            img
+                height: 100%

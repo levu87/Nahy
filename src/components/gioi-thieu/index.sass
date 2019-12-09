@@ -1,0 +1,100 @@
+.gioi-thieu-1
+    .image-wrapper
+        height: 100%
+        img
+            height: 100%
+            width: 100%
+    .text-wrapper
+        padding-left: 10px
+        padding-top: 30px
+        p
+            font-weight: 400
+            margin-bottom: 20px
+        .full-content
+            padding: 30px
+            background: #f3f3f3
+            @media(min-width: 1025px)
+                margin-top: 50px
+                padding: 50px
+                margin-left: -150px
+    .list-item-wrapper
+        margin-top: 30px
+        @media(min-width: 1025px)
+            margin-top: 60px
+        .item
+            margin-bottom: 10px
+            figure
+                position: relative
+                .image
+                    background: #000
+                    img
+                        opacity: .5
+                        width: 100%
+                figcaption
+                    color: #fff
+                    padding: 30px
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    text-align: center
+                    flex-direction: column
+                    .ic
+                        margin-bottom: 30px
+                    h5
+                        margin-bottom: 15px
+                        text-transform: uppercase
+                        font-size: 18px
+                        font-weight: 500
+                        @media(min-width: 1025px)
+                            font-size: 24px
+.gioi-thieu-2
+    background: #f3f3f3
+.gioi-thieu-3
+    .content-wrapper
+        .text
+            @media(min-width: 768px)
+                
+                -webkit-column-count: 2
+                -moz-column-count: 2
+                column-count: 2
+            p
+                margin-bottom: 10px
+                font-weight: 400
+                color: #666
+                padding: 0 10px
+    .image-list-wrapper
+        .image
+            margin-bottom: 10px
+        img
+            width: 100%
+.gioi-thieu-4
+    background: #f3f3f3
+    .wrapper
+        + .wrapper
+            margin-top: 30px
+            @media(min-width: 1025px)
+                margin-top: 50px
+        &:nth-child(even)
+            @media(min-width: 1025px)
+                
+                .image-wrapper
+                    order: 2
+        .image-wrapper
+            img
+                width: 100%
+        .content-wrapper
+            padding: 30px 10px
+            p
+                + p
+                    margin-top: 20px
+        @media(min-width: 1025px)
+            display: flex
+            margin: 0 -15px
+            &>div
+                flex: 0 0 50%
+                padding: 0 15px
