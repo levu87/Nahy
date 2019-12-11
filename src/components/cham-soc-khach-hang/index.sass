@@ -74,6 +74,8 @@
     .box-left
         @media (max-width: 1025px)
             margin-bottom: 2rem
+        .box-wrapper
+            border: 1px solid #e0e0e0
         .head 
             width: 100% 
             background: #333333
@@ -87,7 +89,6 @@
                 font-weight: 400
         .list-item 
             list-style: none
-            border: 1px solid #e0e0e0
             border-top: none 
             li:not(:last-child)
                 position: relative
@@ -120,7 +121,7 @@
 
 
                         
-                &:hover 
+                &:hover , &.active
                     background: #333333
                     &:after 
                         display: none

@@ -1,0 +1,1093 @@
+.checkout-step-wrap
+	.row
+		margin: 0
+		overflow: hidden
+	.step
+		background: darken(white,6%)
+		padding: 14px 0
+		flex: 0 0 25%
+		@media (min-width: 576px)
+			padding-left: 20px
+		@media (min-width: 768px)
+			position: relative
+			&:after,&:before
+				position: absolute
+				width: 0
+				height: 0
+				top: 50%
+				left: 100%
+				z-index: 1
+				border-style: solid
+				content: ''
+			&:after
+				border-width: 26px 0 26px 26px
+				transform: translateY(-50%)
+				border-color: transparent transparent transparent darken(white,6%)
+			&:before
+				border-width: 27px 0 27px 27px
+				transform: translateY(-50%) translateX(2px)
+				border-color: transparent transparent transparent darken(white,12%)
+
+		@media (min-width: 992px)
+			padding-left: 50px
+		p
+			margin-bottom: 0
+			@media (min-width: 576px)
+				display: flex
+			span
+				margin-top: 0
+				display: flex
+				font-weight: 800
+				text-transform: uppercase
+				justify-content: center
+				font-size: 11px
+				@media (min-width: 576px)
+					display: inline-flex
+					font-size: 13px
+				@media (min-width: 992px)
+					font-size: 15px
+				&:first-child
+					font-size: 0
+					&:before
+						font-family: 'Font Awesome 5 Free'
+						font-weight: 900
+						font-size: 15px
+						-moz-osx-font-smoothing: grayscale
+						-webkit-font-smoothing: antialiased
+						display: inline-block
+						font-style: normal
+						font-variant: normal
+						text-rendering: auto
+					@media (min-width: 576px)
+						padding-right: 1rem
+				&:last-child
+					color: lighten(black,25%)
+					font-weight: 500
+					@media (min-width: 576px)
+						justify-content: flex-start
+		&:nth-child(1)
+			p
+				span:first-child
+					font-size: 0
+					&:before
+						content: '\f07a'
+		&:nth-child(2)
+			p
+				span:first-child
+					font-size: 0
+					&:before
+						content: '\f007'
+		&:nth-child(3)
+			p
+				span:first-child
+					font-size: 0
+					&:before
+						content: '\f044'
+		&:nth-child(4)
+			p
+				span:first-child
+					font-size: 0
+					&:before
+						content: '\f09d'
+		&.finished
+			background: #737d83
+			&:after
+				border-left-color: #737d83
+			span
+				&:first-child
+					color: white
+					&:before
+						content: '\f00c'
+				&:last-child
+					color: white
+		&.active
+			p
+				span
+					&:nth-child(2)
+						color: #ff6600
+					&:nth-child(1)
+						color: #737d83
+// 4 Bước thanh toán
+.checkout
+	background: darken(white,3%)
+	padding: 30px 0
+	@media (min-width: 768px)
+		padding: 45px 0
+	@media (min-width: 992px)
+		padding: 60px 0
+	.checkout-title
+		margin-bottom: .75rem
+		position: relative
+		h3
+			font-size: 16px
+			font-weight: 500
+			color: lighten(black,20%)
+			text-transform: uppercase
+			padding-left: 16px
+			border-left: 2px solid #ff6600
+			span:first-child
+				margin-right: 8px
+				color: #737d83
+			span:nth-child(3)
+				color: #ff6600
+		.btn-edit
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			font-size: 0
+			&:before
+				font-family: 'Font Awesome 5 Free'
+				content: '\f044'
+				font-weight: 900
+				font-size: 15px
+				color: #737d83
+	.cart-button-checkout
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 70px
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		.btn
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			height: 50px
+			border-radius: 25px
+			min-width: 1px
+			padding: 0 2rem
+			line-height: 1
+			cursor: pointer
+			text-decoration: none
+			text-transform: uppercase
+			@media (max-width: 767.98px)
+				height: 40px
+				padding: 0 16px
+				width: initial
+			span
+				font-size: 12px
+				@media (min-width: 768px)
+					font-size: 14px
+					&:first-child
+						margin-right: .5rem
+				&.mdi
+					font-size: r(22px)
+			&.btn-prev
+				background: darken(white, 8%)
+				color: black
+				@media (min-width: 480px)
+					margin-bottom: 0
+				span
+					color: lighten(black,20%)
+			&.btn-next
+				background-image: linear-gradient( 90deg, rgb(46,177,53) 0%, rgb(0,152,74) 100%, rgb(78,147,12) 100%, rgb(82,194,23) 100%, rgb(117,165,80) 100%, rgb(110,175,64) 100%, rgb(122,193,29) 100%, rgb(180,217,133) 100%, rgb(168,212,113) 100%, rgb(162,210,97) 100%, rgb(176,214,102) 100%)
+				color: white
+				span
+					color: white
+	.cart-total-price
+		margin: 24px 0
+		text-align: right
+		p
+			font-size: 14px
+			font-weight: 400
+			color: lighten(black,20%)
+			&:nth-child(1)
+				span:nth-child(1)
+					font-size: 15px
+					font-weight: 600
+				strong:last-child
+					font-size: r(20px)
+					font-weight: 600
+					color: #ff6600
+	.cart-order-summary
+		overflow: hidden
+		border-radius: 5px
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
+		background: white
+		margin-bottom: r(30px)
+		padding: 20px
+		@media (min-width: 992px)
+			margin-bottom: 0
+		table
+			width: 100%
+			tr
+				td
+					padding: 1rem 0
+					figure
+						display: flex
+						align-items: center
+						margin-bottom: 0
+						a
+							flex: 0 0 70px
+							max-width: 70px
+							border: 1px solid darken(white,4%)
+							margin-right: 1rem
+							img
+								width: 100%
+						figcaption
+							h4,p
+								text-transform: uppercase
+								font-weight: 500
+								font-size: 11px
+								@media (min-width: 576px)
+									font-size: 14px
+								a
+									margin-right: 0
+									border: 0
+									color: lighten(black,20%)
+					&:last-child
+						text-align: right
+						width: 100px
+						font-size: 11px
+						@media (min-width: 576px)
+							font-size: 14px
+							width: 120px
+							vertical-align: top
+							padding-top: 35px
+						p
+							font-weight: 500
+							font-size: 11px
+							@media (min-width: 576px)
+								font-size: 14px
+							&.total-price
+								font-size: 14px
+								font-weight: 700
+								color: #737d83
+				+ tr
+					border-top: 1px solid darken(white,8%)
+				&.amount
+					td
+						padding: .65rem 0
+						font-weight: 500
+						color: lighten(black,20%)
+						font-size: 11px
+						@media (min-width: 576px)
+							font-size: 14px
+						&:last-child
+							font-weight: 400
+							font-size: 12px
+							@media (min-width: 576px)
+								font-size: 15px
+					&.price
+						td
+							&:last-child
+								white-space: nowrap
+								font-size: r(20px)
+								font-weight: 700
+								color: #ff6600
+	.miniGift
+		padding: 10px 10px 10px 30px
+		.item
+			display: flex
+			position: relative
+			padding-top: 10px
+			+ .item
+				border-top: 1px dashed rgba(0,0,0,.1)
+				margin-top: 10px
+			&:before
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background: #2eb135
+				left: -18px
+				content: ''
+			.img
+				flex: 0 0 45px
+				max-width: 45px
+			.caption
+				flex-basis: 0
+				flex-grow: 1
+				max-width: 100%
+				padding-left: 10px
+				font-size: 12px
+	// Step 1
+	&.step-1
+		.cart-table-list
+			.quantity
+				display: flex
+				background-color: darken(white,4%)
+				border-radius: 20px
+				max-width: 120px
+				margin-left: auto
+				margin-right: auto
+				border: 1px solid darken(white,12%)
+				@media (max-width: 767.9px)
+					margin-right: initial
+				span
+					flex: 0 0 40px
+					height: 40px
+					display: flex
+					justify-content: center
+					align-items: center
+					cursor: pointer
+					color: black
+					font-weight: 600
+					&::selection
+						background: none
+				input
+					flex: 0 0 40px
+					max-width: 40px
+					height: 40px
+					border: 0
+					background: none
+					text-align: center
+					color: black
+					font-weight: 600
+					&::selection
+						background: none
+					&:focus
+						outline: 0
+			table
+				width: 100%
+				border: none
+				border-collapse: collapse
+				box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
+				background: white
+				padding: 0 30px
+				display: flex
+				font-size: 15px
+				flex-direction: column
+				@media (max-width: 767.9px)
+					padding: 0
+				thead
+					display: table
+					@media (max-width: 767.9px)
+						display: none
+					tr
+						background: white
+						height: 3rem
+						th
+							vertical-align: middle
+							font-size: 15px
+							font-weight: 600
+							color: black
+							text-transform: uppercase
+							&:first-child
+								width: 50%
+								text-align: left
+							&:nth-child(2)
+								width: 16.6667%
+								text-align: center
+							&:nth-child(3)
+								width: 16.6667%
+								text-align: center
+							&:last-child
+								width: 16.6667%
+								text-align: center
+				tbody
+					display: table
+					@media (max-width: 767.9px)
+						display: flex
+						flex-wrap: wrap
+					tr
+						border-top: 1px solid darken(white,12%)
+						padding: 20px 0
+						td
+							vertical-align: middle
+							font-size: 15px
+							font-weight: 400
+							height: 100px
+							&:first-child
+								width: 50%
+								text-align: left
+								a
+									text-transform: uppercase
+									font-size: 16px
+									color: #333
+							&:nth-child(2)
+								width: 16.6667%
+								text-align: center
+								.sale
+									font-size: 13px
+							&:nth-child(3)
+								width: 16.6667%
+								text-align: center
+							&:last-child
+								width: 16.6667%
+								text-align: center
+								.posrel
+									position: relative
+						@media (max-width: 768px)
+							padding: 20px
+							display: flex
+							flex-wrap: wrap
+							position: relative
+							td
+								height: initial
+								&:first-child
+									margin: 15px 0
+									padding-left: 0
+									width: 100%
+									vertical-align: middle
+									width: 100%
+								&:nth-child(2), &:nth-child(3), &:last-child
+									width: 100%
+									text-align: right
+									margin-top: .5rem
+								&:last-child
+									.posrel
+										position: initial
+						figure
+							display: inline-flex
+							align-items: center
+							margin-bottom: 0
+							img
+								max-width: 60px
+							figcaption
+								padding-left: 1rem
+								h4, p
+									font-size: 13px
+									font-weight: 400
+									color: lighten(black,20%)
+						.removeproduct
+							display: flex
+							justify-content: center
+							align-items: center
+							position: absolute
+							transform: translateY(-50%)
+							top: 50%
+							right: 0
+							color: #737d83
+							cursor: pointer
+							@media (max-width: 767.9px)
+								width: 25px
+								height: 25px
+								top: 0
+								transform: translateY(0)
+	// Step 2
+	&.step-2
+		overflow: hidden
+		@media (max-width: 576px)
+			padding: 10px 0
+			font-size: 14px
+		.login-form
+			width: 100%
+			max-width: 400px
+			margin: 0 auto
+			padding: 20px 0
+			ul
+				padding-left: 0
+				list-style-type: none
+				margin-bottom: 0
+				li
+					label
+						font-size: 15px
+						font-weight: 400
+						color: lighten(black, 20%)
+
+			.select-group
+				ul
+					margin-bottom: 10px
+					li
+						span
+							user-select: none
+							cursor: pointer
+							display: block
+							position: relative
+						label
+							padding-left: 20px
+							position: relative
+							cursor: pointer
+							color: lighten(black,20%)
+							&:before
+								position: absolute
+								top: 50%
+								left: 0
+								transform: translateY(-50%)
+								content: ''
+								width: 15px
+								height: 15px
+								border-radius: 50%
+								border: 1px solid #aeaeae
+						input
+							display: none
+							&:checked
+								~ label
+									&:before
+										border: 5px solid #ff6600
+
+			.module-title
+				font-size: 15px
+				font-weight: 500
+				margin-bottom: 10px
+				@media (max-width: 576px)
+					margin-bottom: 10px
+			.form-group
+				margin-bottom: 10px
+				position: relative
+				@media (max-width: 576px)
+					margin-bottom: 10px
+				&:nth-child(1)
+					&:before
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						content: "\e818"
+						font-family: 'Linearicons-Free'
+						z-index: 2
+						left: 15px
+				&:nth-child(2)
+					&:before
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						content: "\e80f"
+						font-family: 'Linearicons-Free'
+						z-index: 2
+						left: 15px
+				input
+					border: 0
+					display: inline-flex
+					justify-content: center
+					align-items: center
+					font-size: 13px
+					height: 45px
+					border-radius: 22.5px
+					box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
+					min-width: 1px
+					width: 100%
+					padding: 0 50px
+					line-height: 1
+					color: #737d83
+					background: white!important
+					@media (max-width: 575px)
+						width: 100%
+					&:focus
+						outline: none
+					&[id*="LoginCtrl_UserName"]
+						position: relative
+						&:before
+							position: absolute
+							top: 50%
+							transform: translateY(-50%)
+
+							content: '\e818'
+							font-family: 'Linearicons-Free'
+				a
+					font-size: 14px
+					color: #737d83
+					+ a
+						margin-left: 1rem
+			.checkout-guest
+				.guest-message
+					display: none
+			.btn-continue
+				border: 0
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				height: 50px
+				border-radius: 25px
+				min-width: 1px
+				width: 100%
+				padding: 0 2rem
+				line-height: 1
+				cursor: pointer
+				text-decoration: none
+				text-transform: uppercase
+				background-image: linear-gradient( 90deg, rgb(46,177,53) 0%, rgb(0,152,74) 100%, rgb(78,147,12) 100%, rgb(82,194,23) 100%, rgb(117,165,80) 100%, rgb(110,175,64) 100%, rgb(122,193,29) 100%, rgb(180,217,133) 100%, rgb(168,212,113) 100%, rgb(162,210,97) 100%, rgb(176,214,102) 100%)
+				color: white
+
+	// Step 3
+	&.step-3
+		padding-bottom: r(30px)
+		@media (min-width: 992px)
+			padding-bottom: r(60px)
+		.checkout-title
+			h3
+				padding-left: 0
+				border-left: 0
+				span:first-child
+					display: none
+		.customer-info
+			border-radius: 5px
+			padding: 42px 30px
+			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
+			background: white
+			margin-bottom: 1rem
+			.form-group
+				display: flex
+				flex-wrap: wrap
+				margin-bottom: 1rem
+				align-items: center
+				>span
+					font-size: 11px
+					font-weight: 400
+					color: lighten(black,20%)
+				label
+					flex: 0 0 100%
+					font-size: 15px
+					font-weight: 500
+					text-transform: uppercase
+					color: lighten(black,20%)
+					margin-bottom: 0
+					span
+						width: 100%
+						display: block
+				input,select,textarea
+					background-color: darken(white, 4%)
+					background-clip: padding-box
+					border: 0
+					width: 100%
+					font-size: 14px
+					&:focus
+						outline: none
+						box-shadow: 0 0 .25rem #333
+						border-color: #333
+				textarea
+					height: 120px
+					padding: .5rem .75rem
+					border-radius: 5px
+				input,select
+					height: 45px
+					padding: 0 .75rem
+					border-radius: 22.5px
+					option
+						color: lighten(black,20%)
+				@media (min-width: 576px)
+					label
+						flex: 0 0 180px
+					input, select, textarea
+						flex: 0 0 calc(100% - 180px)
+					span
+						margin-left: auto
+						align-self: center
+				@media (min-width: 768px)
+					&.form-phone
+						input
+							flex: 0 0 calc(50% - 90px)
+						span
+							flex: 0 0 calc(50% - 105px)
+							order: 3
+							font-size: 14px
+						label.error
+							margin-left: calc(50% - 90px)
+							order: 4
+				input.error
+					border: 1px solid red
+					box-shadow: 0 0 .25rem red
+				label.error
+					font-family: 'Montserrat',sans-serif
+					top: 42px
+					right: 10px
+					color: red
+					font-weight: 400
+					width: 100%
+					font-size: 11px
+					margin-top: .5rem
+					margin-left: auto
+					text-align: right
+					&:before
+						font-weight: 900
+						margin-right: .325rem
+						content: '\f06a'
+						font-family: 'Font Awesome 5 Free'
+			.form-checkbox
+				padding-bottom: 1rem
+				margin-bottom: 1rem
+				border-bottom: 1px solid darken(white,12%)
+				label
+					padding-left: 30px
+					position: relative
+					font-size: 15px
+					font-weight: 400
+					color: lighten(black,20%)
+					&:before
+						content: ''
+						position: absolute
+						width: 15px
+						height: 15px
+						left: 4px
+						top: 4px
+						border: 1px solid darken(white,12%)
+				input
+					display: none
+					&:checked
+						~ label
+							&:before
+								font-family: 'Font Awesome 5 Free'
+								font-weight: 900
+								color: #333
+								font-size: 13px
+								content: '\f00c'
+								display: flex
+								align-items: center
+								justify-content: center
+								padding-left: 1px
+			hr
+				max-width: calc(100% - 180px)
+				flex: 0 0 calc(100% - 180px)
+				margin: 2rem 0 2rem auto
+				height: 1px
+				border: 0
+				background: darken(white,12%)
+			.form-same
+				.form-wrapper
+					display: block
+					height: 100%
+					opacity: 1
+					transition: all .3s ease-out
+				label[for="ttmh"]
+					padding-left: 30px
+					position: relative
+					font-size: 15px
+					font-weight: 400
+					color: lighten(black,20%)
+					&:before
+						content: ''
+						position: absolute
+						width: 15px
+						height: 15px
+						left: 4px
+						top: 4px
+						border: 1px solid darken(white,12%)
+				#ttmh
+					display: none
+					&:checked
+						~ label[for="ttmh"]
+							&:before
+								font-family: 'Font Awesome 5 Free'
+								font-weight: 900
+								color: #333
+								font-size: 13px
+								content: '\f00c'
+								display: flex
+								align-items: center
+								justify-content: center
+								padding-left: 1px
+						~ .form-wrapper
+							height: 0
+							overflow: hidden
+							opacity: 0
+		.bill-export
+			.form-wrapper
+				height: 0
+				overflow: hidden
+				opacity: 0
+				transition: all .3s ease-out
+				i
+					margin-bottom: 1rem
+					display: block
+			label[for="Invoice_Required"]
+				padding-left: 30px
+				position: relative
+				font-size: 15px
+				font-weight: 400
+				color: lighten(black,20%)
+				&:before
+					content: ''
+					position: absolute
+					width: 15px
+					height: 15px
+					left: 4px
+					top: 4px
+					border: 1px solid darken(white,12%)
+			#Invoice_Required
+				display: none
+				&:checked
+					~ label[for="Invoice_Required"]
+						&:before
+							font-family: 'Font Awesome 5 Free'
+							font-weight: 900
+							color: #333
+							font-size: 13px
+							content: '\f00c'
+							display: flex
+							align-items: center
+							justify-content: center
+							padding-left: 1px
+					~ .form-wrapper
+						display: block
+						height: 100%
+						opacity: 1
+		.coupon-info
+			background: white
+			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
+			border-radius: 5px
+			padding: 42px 30px
+			margin-bottom: 1.25rem
+			@media (min-width: 576px)
+				padding-left: 30px
+			p
+				font-size: 12px
+				font-weight: 400
+				color: lighten(black,20%)
+				margin-bottom: .5rem
+			.desc
+				font-size: 12px
+				color: lighten(black,20%)
+				i
+					color: lighten(black,40%)
+					margin-bottom: .5rem
+					display: block
+			.desc
+				i
+					font-size: 15px
+					font-style: italic
+					color: #737d83
+					margin-bottom: .5rem
+				p
+					font-size: 15px
+					font-weight: 400
+					color: lighten(black,20%)
+					margin-bottom: .5rem
+
+			.form-group
+				display: flex
+				flex-wrap: wrap
+				margin-bottom: 1rem
+				align-items: center
+				position: relative
+				>span
+					font-size: 11px
+					font-weight: 400
+					color: lighten(black,20%)
+				label
+					flex: 0 0 100%
+					font-size: 15px
+					font-weight: 400
+					text-transform: uppercase
+					color: lighten(black,20%)
+					margin-bottom: 0
+					span
+						width: 100%
+						display: block
+				input
+					background-color: darken(white, 4%)
+					background-clip: padding-box
+					border: 0
+					width: 100%
+					height: 45px
+					padding: 0 .75rem
+					border-radius: 22.5px
+					font-size: 14px
+					&:focus
+						outline: none
+						box-shadow: 0 0 .25rem #333
+						border-color: #333
+				button
+					position: absolute
+					width: 180px
+					border-radius: 20px
+					right: 3px
+					top: 50%
+					transform: translateY(-50%)
+					height: 40px
+					padding: 0 1.25rem
+					background: linear-gradient( 90deg, rgb(46,177,53) 0%, rgb(0,152,74) 100%, rgb(78,147,12) 100%, rgb(82,194,23) 100%, rgb(117,165,80) 100%, rgb(110,175,64) 100%, rgb(122,193,29) 100%, rgb(180,217,133) 100%, rgb(168,212,113) 100%, rgb(162,210,97) 100%, rgb(176,214,102) 100%)
+					border: 0
+					outline: 0
+					color: white
+	// Step 4
+	.cart-payment-method
+		margin-bottom: r(30px)
+		@media (min-width: 992px)
+			margin-bottom: r(60px)
+		.cart-payment-wrapper
+			border-radius: 5px
+			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
+			background: white
+			padding: 15px 40px
+			margin-bottom: 40px
+			@media (max-width: 1024px)
+				padding: 15px
+		.payment-row
+			margin: 0 -30px
+			display: flex
+			flex-wrap: wrap
+			@media (min-width: 768px)
+				margin: 0
+		.method
+			padding: 0 30px
+			flex: 0 0 100%
+			max-width: 100%
+			+ .method
+				margin-top: 15px
+			@media (min-width: 768px)
+				flex: 0 0 20%
+				max-width: 20%
+				padding: 0
+				display: flex
+				justify-content: center
+				+ .method
+					margin-top: 0
+			label
+				padding-left: 30px
+				position: relative
+				margin-bottom: 0
+				cursor: pointer
+				@media (min-width: 768px)
+					padding-left: 0
+					width: 100px
+					padding-top: 30px
+				&:before
+					content: ''
+					position: absolute
+					width: 16px
+					height: 16px
+					top: 50%
+					transform: translateY(-50%)
+					left: 0
+					border: 1px solid darken(white,12%)
+					border-radius: 50%
+					@media (min-width: 768px)
+						top: 0
+						left: 50%
+						transform: translateX(-50%)
+			figure
+				display: flex
+				flex-direction: row
+				margin-bottom: 0
+				height: 100%
+				@media (min-width: 768px)
+					flex-direction: column
+			.imgbox
+				border: 1px solid darken(white,12%)
+				flex: 0 0 80px
+				max-width: 80px
+				@media (min-width: 576px)
+					flex: 0 0 100px
+					max-width: 100px
+			figcaption
+				display: flex
+				align-items: center
+				padding-left: 15px
+				h4
+					margin-bottom: 0
+					font-size: 13px
+					font-weight: 600
+					color: lighten(black,40%)
+				@media (min-width: 768px)
+					padding-left: 0
+					padding-top: 20px
+					text-align: center
+			input
+				display: none
+				&:checked
+					~ label
+						&:before
+							border: 5px solid #308bc2
+						.imgbox
+							border: 1px solid #308bc2
+	// Step 5
+	&.step-5
+		.col-md-6:first-child
+			padding: 0 50px
+		img
+			width: 100%
+		.payment-success
+			font-weight: 400
+			color: lighten(black,20%)
+			font-size: 12px
+			@media (min-width: 576px)
+				font-size: 15px
+			.letter
+				margin-bottom: 32px
+				p
+					strong
+						font-weight: 600
+						color: #737d83
+						font-size: r(22px)
+						@media (min-width: 576px)
+							font-size: r(30px)
+					&:nth-child(3)
+						margin-bottom: 16px
+				ul
+					margin-bottom: 16px
+					li
+						a
+							color: lighten(black,20%)
+					li:last-child
+						a
+							color: #ff6600
+			.notice
+				margin-bottom: 30px
+				font-weight: 600
+				color: #ff6600
+				text-transform: uppercase
+				font-size: 12px
+				padding: 0 40px
+				height: 50px
+				display: flex
+				background: #f8e8de
+				border: 1px solid #ff6600
+				border-radius: 25px
+				align-items: center
+				@media (min-width: 576px)
+					font-size: 15px
+				img
+					flex: 0 0 30px
+					height: 30px
+					padding-right: 10px
+		.cart-button-checkout
+			justify-content: center
+			.btn
+				font-size: 15px
+				font-weight: 600
+				color: white
+				background-image: linear-gradient( 90deg, rgb(46,177,53) 0%, rgb(0,152,74) 100%, rgb(78,147,12) 100%, rgb(82,194,23) 100%, rgb(117,165,80) 100%, rgb(110,175,64) 100%, rgb(122,193,29) 100%, rgb(180,217,133) 100%, rgb(168,212,113) 100%, rgb(162,210,97) 100%, rgb(176,214,102) 100%)
+				span
+					color: white
+					&:first-child
+						display: none
+
+
+.viewed-product
+	padding: r(30px) 15px
+	@media (min-width: 992px)
+		padding: r(60px) 15px
+	.swiper-container
+		padding: 1rem
+		margin: -1rem
+		.swiper-button-prev
+			width: 40px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			background-image: none
+			z-index: 20
+			left: 0
+			&.swiper-button-disabled
+				pointer-events: initial
+			span
+				font-size: r(35px)
+		.swiper-button-next
+			width: 40px
+			height: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			background-image: none
+			z-index: 20
+			right: 0
+			&.swiper-button-disabled
+				pointer-events: initial
+			span
+				font-size: r(35px)
+		.swiper-wrapper
+			.swiper-slide
+				.tna-product-item
+					figure
+						border: 1px solid darken(white,15%)
+						box-shadow: none
+						.boxzoom
+							img
+								width: 100%
+						figcaption
+							.price
+								margin-bottom: .5rem
+							.addcart
+								font-size: 12px
+								font-weight: 600
+								color: lighten(black,20%)
+								display: inline-flex
+								border: 1px solid darken(white,15%)
+								height: 2rem
+								align-items: center
+								padding: 0 .5rem
+								border-radius: 5px

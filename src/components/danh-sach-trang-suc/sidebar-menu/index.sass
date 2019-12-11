@@ -32,14 +32,15 @@
 						content: '\f140'
 						font: normal normal normal 24px/1 Material Design Icons
 						position: absolute
-						top: 1rem
+						top: 26px
+						transform: translateY(-50%)
 						right: 0
 						color: #333333
 						font-size: 1.6rem
 						
 				&.active
 					&:after
-						transform: rotate(180deg)
+						transform: rotate(180deg) translateY(50%)
 					>a
 						
 						font-weight: 600
@@ -106,20 +107,23 @@
 				border: 1.2px solid #666666
 		.checkbox 
 			position: relative
-			padding-left: 4rem
 			margin-bottom: 1.5rem
-			&:before 
-				position: absolute 
-				content: '\f131'
-				display: block
-				top: 50% 
-				left: 0
-				transform: translateY(-50%)
-				font: normal normal normal 24px/1 Material Design Icons
-				color: #666666
+			a
+				display: inline-block
+				padding-left: 4rem
+				&:before 
+					position: absolute 
+					content: '\f131'
+					display: block
+					top: 50% 
+					left: 0
+					transform: translateY(-50%)
+					font: normal normal normal 24px/1 Material Design Icons
+					color: #666666
 			&.active 
-				&:before
-					content: '\fc2e'
+				a
+					&:before
+						content: '\fc2e'
 
 	@media (max-width: 1199.98px)
 		.product-nav-list,

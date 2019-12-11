@@ -14,7 +14,7 @@ html
 		font-size: 50%
 body 
 	font-family: 'Livvic', sans-serif
-	line-height: 1
+	line-height: 1.4
 	font-weight: 400
 	font-size: 16px
 
@@ -55,3 +55,161 @@ a
 	display: block
 .hidden 
 	display: none
+.playfair
+	font-family: 'Playfair Display', serif
+.livvic
+	font-family: 'Livvic', sans-serif
+.title-h1 
+	font-size: 3rem 
+	text-transform: uppercase
+	font-weight: 600
+	span:nth-child(1)
+		color: #13293d
+		position: relative
+		&:after 
+			content: ''
+			position: absolute
+			bottom: -1rem 
+			left: 0
+			width: 100%
+			height: .15rem 
+			background: #13293d
+	span:nth-child(2)
+		color: #4C58A4
+.nahy-section
+	padding: 30px 0
+	@media(min-width: 1025px)
+		padding: 80px 0
+	&:nth-child(1)
+		@media(min-width: 1025px)
+			padding-top: 30px
+.nahy-title
+	font-family: 'Playfair Display', serif
+	text-transform: uppercase
+	font-weight: 500
+	font-size: 24px
+	@media(min-width: 1025px)
+		font-size: 40px
+	&.center
+		text-align: center
+	&.has-logo
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			margin-left: 20px
+main
+	padding-top: 126px
+	@media(max-width: 1200px)
+		padding-top: 70px
+.nahy-description
+	// font-weight: 500
+	text-align: center
+	max-width: 900px
+	color: #666
+	margin: 0 auto
+	line-height: 1.4
+.nahy-navigation
+	background: #fff
+	box-shadow: 1.5px 2.598px 8.64px 0.36px rgba(9, 9, 9, 0.1)
+
+	ul
+		text-align: center
+		white-space: nowrap
+		overflow-x: auto
+		li
+			display: inline-block
+			padding: 0 15px
+			a
+				padding: 15px 0
+				position: relative
+				display: block
+				text-transform: uppercase
+				// transition: .4s ease-in-out all
+				color: #333
+			&.active, &:hover
+				a
+					text-shadow: 1px 0 0
+					&::after
+						content: ''
+						width: 100%
+						height: 2px
+						background: #333333
+						position: absolute
+						bottom: 0
+						left: 0
+		&::-webkit-scrollbar
+			height: 4px
+		&::-webkit-scrollbar-track
+			background: #f1f1f1
+		&::-webkit-scrollbar-thumb
+			background: #8888
+	@media(max-width: 1200px)
+		ul
+			li
+				a
+					font-size: 14px
+
+.swiper-navigation
+	text-align: center
+	&>div
+		margin: 0 5px
+		width: 40px
+		height: 40px
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		font-size: 20px
+		border: 1px solid #999999
+		cursor: pointer
+		color: #999
+		transition: .4s ease-in-out all
+		&:focus
+			outline: none
+		&:hover
+			background: #999999
+			color: #fff
+
+.pt-0
+	padding-top: 0
+.pb-0
+	padding-bottom: 0
+.mb-1
+    margin-bottom: 10px
+.mb-2
+    margin-bottom: 20px
+.mb-3
+    margin-bottom: 30px
+.mt-1
+    margin-top: 10px
+.mt-2
+    margin-top: 20px
+.mt-3
+    margin-top: 30px
+.mt-4
+    margin-top: 40px
+@media(min-width: 1025px)
+    .mb-lg-0
+        margin-bottom: 0px
+    .mb-lg-1
+        margin-bottom: 10px
+    .mb-lg-2
+        margin-bottom: 20px
+    .mb-lg-3
+        margin-bottom: 30px
+    .mb-lg-4
+        margin-bottom: 40px
+    .mb-lg-5
+        margin-bottom: 50px
+    .mt-lg-0
+        margin-top: 0px
+    .mt-lg-1
+        margin-top: 10px
+    .mt-lg-2
+        margin-top: 20px
+    .mt-lg-3
+        margin-top: 30px
+    .mt-lg-4
+        margin-top: 40px
+    .mt-lg-5
+        margin-top: 50px
